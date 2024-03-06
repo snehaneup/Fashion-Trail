@@ -1,0 +1,54 @@
+1. Check Python
+2. Check pip
+3. Create Project(yo garne htdocs vitra get bash garera)
+4. Connect Database(project create vayesi settings.py ma gaera database connect garne)
+
+
+Part 2:
+1. Create App- Store (python manage.py startapp store)
+2. Register the app in the settings.py (installed app ma thapne create gareko app lai)
+3. Include the app's urls file in the main urls file.(aba store ma urls create garne ani main project ko urls ma include garaune
+In project's urls.py:
+-from django.urls import path, include
+
+-path('',include('store.urls'))
+
+In store's urls.py:
+from django.urls import path
+
+urlpatterns = [
+    path()
+] 
+)
+4. Create the templates structure.(yo vaneko chai templates vanne folder create garne store vitra ani templates ko vitra store vanne folder create garne feri ani tyo store ko vitra chai html file haru banaune ahile ko laagi index.html create garisakeko xa)
+5. Create the home path and views function and render the index.html template.
+(esma chai aba store ko urls ma gaera path dine view ko
+-from . import views
+
+-path('home', views.home)
+
+
+aba store ko views.py ma:
+-from django.shortcuts import render
+
+def home(request):
+    return render(request,"store/index.html")
+    
+ani urls ma thapne:
+-path('home', views.home, name="home"),
+
+ya dherai chiz gariyo lekhna sakidaina aba only steps
+)
+
+
+Part 3:
+1. Create super user and install django jazzmin(pip install django-jazzmin yo command run garesi installed apps ma raakhnu parxa settings.py ko)
+2. Create category and product models and register in admin.py file.
+3. Insert category and product data
+
+
+
+Part 4:
+1. Create home page and add Slider
+2. Fetch Categories and Products
+3. Display Trending Category and Products in home page
